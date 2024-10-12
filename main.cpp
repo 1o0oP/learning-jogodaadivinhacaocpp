@@ -1,9 +1,11 @@
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    std::cout << "***************************" << std::endl;
-    std::cout << "*** Jogo da Adivinhação ***" << std::endl;
-    std::cout << "***************************" << std::endl;
+    cout << "***************************" << endl;
+    cout << "*** Jogo da Adivinhação ***" << endl;
+    cout << "***************************" << endl;
     return 0;
 }
