@@ -10,17 +10,21 @@ int main()
     cout << "***************************" << endl;
 
     const int NUMERO_SECRETO = 42;
+    bool acertou = false;
 
-    cout << "O número secreto é " << NUMERO_SECRETO << endl;
+    while (!acertou)
+    {
+        int chute;
+        cout << "Digite o seu chute: ";
+        cin >> chute;
 
-    int chute;
-    cout << "Digite o seu chute: ";
-    cin >> chute;
+        cout << "O valor do seu chute é: " << chute << endl;
+        printFeedback(chute, NUMERO_SECRETO);
 
-    cout << "O valor do seu chute é: " << chute << endl;
+        acertou = chute == NUMERO_SECRETO;
+    }
 
-    printFeedback(chute, NUMERO_SECRETO);
-
+    cout << "Fim de jogo!" << endl;
     return 0;
 }
 
