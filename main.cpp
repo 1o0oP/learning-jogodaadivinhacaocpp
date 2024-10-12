@@ -27,12 +27,13 @@ int main()
 void printFeedback(int chute, const int NUMERO_SECRETO)
 {
     bool acertou = chute == NUMERO_SECRETO;
+    bool maior = chute > NUMERO_SECRETO;
 
     if (acertou)
     {
         cout << "Parabéns! Você acertou o número secreto!" << endl;
     }
-    else if (chute > NUMERO_SECRETO)
+    else if (maior)
     {
         cout << "Seu chute foi maior que o número secreto!" << endl;
     }
