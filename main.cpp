@@ -28,10 +28,17 @@ int main()
         pontos -= pontosPerdidos(chute, NUMERO_SECRETO);
     }
 
+    printGameOver(tentativas, pontos);
+    return 0;
+}
+
+void printGameOver(int tentativas, double pontos)
+{
     cout << "Fim de jogo!" << endl;
     cout << "Você acertou o número secreto em " << tentativas << " tentativas!" << endl;
+    cout.precision(2);
+    cout << fixed;
     cout << "Sua pontuação foi de " << pontos << " pontos!" << endl;
-    return 0;
 }
 
 void printFeedback(int chute, const int NUMERO_SECRETO)
