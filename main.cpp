@@ -20,7 +20,7 @@ int main()
     int tentativasMaximas = getTentativasMaximas(dificuldade);
     double pontos = 1000.0;
 
-    for (int i = 1; i < tentativasMaximas; i++)
+    for (int i = 1; i <= tentativasMaximas; i++)
     {
         int chute;
         cout << "Digite o seu chute: ";
