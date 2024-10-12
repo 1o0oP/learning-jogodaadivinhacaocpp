@@ -50,7 +50,7 @@ void printGameOver(int tentativas, double pontos, bool acertou)
     }
     else
     {
-        cout << "Você atingiu o limite de tentativas!" << endl;
+        cout << "Você perdeu o jogo pois atingiu o limite de tentativas!" << endl;
         cout << "Sua pontuação foi de " << pontos << " pontos!" << endl;
         cout << "Tente novamente!" << endl;
     }
