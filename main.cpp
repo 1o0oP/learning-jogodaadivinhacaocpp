@@ -9,7 +9,7 @@ int main()
     cout << "*** Jogo da Adivinhação ***" << endl;
     cout << "***************************" << endl;
 
-    const int NUMERO_SECRETO = 42;
+    const int NUMERO_SECRETO = generateRandomSecretNumber();
     bool acertou = false;
     int tentativas = 0;
 
@@ -48,4 +48,11 @@ void printFeedback(int chute, const int NUMERO_SECRETO)
     {
         cout << "Seu chute foi menor que o número secreto!" << endl;
     }
+}
+
+int generateRandomSecretNumber()
+{
+    int seed = time(0);
+    int randomNumber = rand() % 100;
+    return randomNumber;
 }
