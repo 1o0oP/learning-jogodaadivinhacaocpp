@@ -11,6 +11,7 @@ int main()
 
     const int NUMERO_SECRETO = 42;
     bool acertou = false;
+    int tentativas = 0;
 
     while (!acertou)
     {
@@ -22,9 +23,11 @@ int main()
         printFeedback(chute, NUMERO_SECRETO);
 
         acertou = chute == NUMERO_SECRETO;
+        tentativas++;
     }
 
     cout << "Fim de jogo!" << endl;
+    cout << "Você acertou o número secreto em " << tentativas << " tentativas!" << endl;
     return 0;
 }
 
