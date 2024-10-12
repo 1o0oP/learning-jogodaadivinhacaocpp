@@ -12,6 +12,7 @@ int main()
     const int NUMERO_SECRETO = generateRandomSecretNumber();
     bool acertou = false;
     int tentativas = 0;
+    double pontos = 1000.0;
 
     while (!acertou)
     {
@@ -24,10 +25,12 @@ int main()
 
         acertou = chute == NUMERO_SECRETO;
         tentativas++;
+        pontos -= pontosPerdidos(chute, NUMERO_SECRETO);
     }
 
     cout << "Fim de jogo!" << endl;
     cout << "Você acertou o número secreto em " << tentativas << " tentativas!" << endl;
+    cout << "Sua pontuação foi de " << pontos << " pontos!" << endl;
     return 0;
 }
 
@@ -52,7 +55,12 @@ void printFeedback(int chute, const int NUMERO_SECRETO)
 
 int generateRandomSecretNumber()
 {
-    int seed = time(0);
     int randomNumber = rand() % 100;
     return randomNumber;
+}
+
+double pontosPerdidos(int chute, const int NUMERO_SECRETO)
+{
+    double pontosPerdidos = abs(chute - NUMERO_SECRETO) / 2.0;
+    return pontosPerdidos;
 }
