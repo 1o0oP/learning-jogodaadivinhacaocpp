@@ -1,4 +1,5 @@
 #pragma once
+void printGameHeader();
 void printFeedback(int chute, const int NUMERO_SECRETO);
 void printGameOver(int tentativas, double pontos, bool acertou);
 int generateRandomSecretNumber();

@@ -5,10 +5,7 @@ using namespace std;
 
 int main()
 {
-    cout << "***************************" << endl;
-    cout << "*** Jogo da Adivinhação ***" << endl;
-    cout << "***************************" << endl;
-
+    printGameHeader();
     int dificuldade = lerDificuldade();
     const int NUMERO_SECRETO = generateRandomSecretNumber();
     bool acertou = false;
@@ -120,4 +117,11 @@ int lerDificuldade()
     char dificuldade;
     cin >> dificuldade;
     return dificuldade;
+}
+
+void printGameHeader()
+{
+    cout << "***************************" << endl;
+    cout << "*** Jogo da Adivinhação ***" << endl;
+    cout << "***************************" << endl;
 }
