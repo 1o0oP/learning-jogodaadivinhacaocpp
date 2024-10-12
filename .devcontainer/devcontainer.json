@@ -1,0 +1,45 @@
+{
+	"name": "c++",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": ".."
+	},
+    "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.makefile-tools",
+				"AutumnMoon.cpp-unit-test",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-themes",
+				"twxs.cmake",
+				"ms-vscode.cmake-tools",
+				"EditorConfig.EditorConfig",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"s-nlf-fh.glassit",
+				"fathulfahmy.lunarkeymap",
+				"JuniorSchmidt.lunar-vscode-theme",
+				"vscodevim.vim",
+				"VSpaceCode.whichkey"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					},
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				}
+			}
+		}
+	},
+	"runArgs": [
+		"--privileged"
+		// "--network",
+		// "host",
+	]
+}
