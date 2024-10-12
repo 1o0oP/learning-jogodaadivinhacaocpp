@@ -6,3 +6,4 @@ double pontosPerdidos(int chute, const int NUMERO_SECRETO);
 bool isMatch(int chute, const int NUMERO_SECRETO);
 int getTentativasMaximas(char dificuldade);
 bool tentativasMaximasAtingidas(int tentativas, int tentativasMaximas);
+int lerDificuldade();

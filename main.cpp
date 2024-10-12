@@ -9,11 +9,7 @@ int main()
     cout << "*** Jogo da Adivinhação ***" << endl;
     cout << "***************************" << endl;
 
-    cout << "Escolha o seu nível de dificuldade: " << endl;
-    cout << "Fácil (F), Médio (M) ou Difícil (D)" << endl;
-    char dificuldade;
-    cin >> dificuldade;
-
+    int dificuldade = lerDificuldade();
     const int NUMERO_SECRETO = generateRandomSecretNumber();
     bool acertou = false;
     int tentativas = 0;
@@ -115,4 +111,13 @@ int getTentativasMaximas(char dificuldade)
 bool tentativasMaximasAtingidas(int tentativas, int tentativasMaximas)
 {
     return tentativas >= tentativasMaximas;
+}
+
+int lerDificuldade()
+{
+    cout << "Escolha o seu nível de dificuldade: " << endl;
+    cout << "Fácil (F), Médio (M) ou Difícil (D)" << endl;
+    char dificuldade;
+    cin >> dificuldade;
+    return dificuldade;
 }
