@@ -25,6 +25,11 @@ int main()
         acertou = isMatch(chute, NUMERO_SECRETO);
         tentativas++;
         pontos -= pontosPerdidos(chute, NUMERO_SECRETO);
+
+        if (acertou)
+        {
+            break;
+        }
     }
 
     printGameOver(tentativas, pontos, acertou);
