@@ -1,4 +1,5 @@
 #include <iostream>
+#include "main.h"
 
 using namespace std;
 
@@ -18,6 +19,13 @@ int main()
 
     cout << "O valor do seu chute é: " << chute << endl;
 
+    printFeedback(chute, NUMERO_SECRETO);
+
+    return 0;
+}
+
+void printFeedback(int chute, const int NUMERO_SECRETO)
+{
     bool acertou = chute == NUMERO_SECRETO;
 
     if (acertou)
@@ -32,6 +40,4 @@ int main()
     {
         cout << "Seu chute foi menor que o número secreto!" << endl;
     }
-
-    return 0;
 }
