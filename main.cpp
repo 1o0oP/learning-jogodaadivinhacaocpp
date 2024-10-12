@@ -18,20 +18,19 @@ int main()
 
     cout << "O valor do seu chute é: " << chute << endl;
 
-    if (chute == numeroSecreto)
+    bool acertou = chute == numeroSecreto;
+
+    if (acertou)
     {
         cout << "Parabéns! Você acertou o número secreto!" << endl;
     }
+    else if (chute > numeroSecreto)
+    {
+        cout << "Seu chute foi maior que o número secreto!" << endl;
+    }
     else
     {
-        if (chute > numeroSecreto)
-        {
-            cout << "Seu chute foi maior que o número secreto!" << endl;
-        }
-        else
-        {
-            cout << "Seu chute foi menor que o número secreto!" << endl;
-        }
+        cout << "Seu chute foi menor que o número secreto!" << endl;
     }
 
     return 0;
