@@ -70,6 +70,8 @@ void printFeedback(int chute, const int NUMERO_SECRETO)
 
 int generateRandomSecretNumber()
 {
+    int seed = time(0);
+    srand(seed);
     int randomNumber = rand() % 100;
     return randomNumber;
 }
